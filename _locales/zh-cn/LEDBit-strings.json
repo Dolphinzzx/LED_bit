@@ -1,5 +1,4 @@
 {
-
   "LEDBit.LEDShow|block": "LED表情面板 显示|%index",
   "LEDBit.LEDDraw|block": "LED表情面板 设置|X %x|Y %y| %on",
   "LEDBit.LEDClear|block": "LED表情面板 清空",
@@ -11,6 +10,6 @@
   "LEDBit.enExpression.FACE3|block": "伤心",
   "LEDBit.enExpression.FACE4|block": "大哭",
   "LEDBit.enExpression.FACE5|block": "惊讶",
-  "LEDBit.enExpression.FACE5|block": "吐舌头"
+  "LEDBit.enExpression.FACE6|block": "吐舌头"
  
 }
