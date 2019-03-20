@@ -201,14 +201,19 @@ namespace LEDBit {
          } 
     }
 	
-	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index"
+	/**
+     * *****************************************************************
+     * @param index
+     */
+	 
+	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index_1"
     //% weight=98
-	export function LEDdynamic(index: dynamicenExpression): void {
+	export function LEDdynamic(index_1: dynamicenExpression): void {
         if (!initMatrix) {
             matrixInit();
             initMatrix = true;
         }
-        switch(index) { 
+        switch(index_1) { 
             case dynamicExpression.dynamic_FACE1: { 
                 Open_mouth0[0] = Open_mouth01[0];
                 for (let i = 1; i < 17; i += 2) {
