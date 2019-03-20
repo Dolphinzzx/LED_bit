@@ -64,20 +64,10 @@ namespace LEDBit {
 
     //动态表情
     export enum dynamicExpression { 
-        //% blockId="dynamic_FACE1" block="Open_mouth"
+        //% blockId="dynamic_FACE1" block="Open_mouth0"
         dynamic_FACE1 = 0,
-        //% blockId="dynamic_FACE2" block="Grin"
+        //% blockId="dynamic_FACE2" block="Open_mouth1"
         dynamic_FACE2,
-        //% blockId="dynamic_FACE3" block="Sad"
-        dynamic_FACE3,
-        //% blockId="dynamic_FACE4" block="Cry"
-        dynamic_FACE4,
-		//% blockId="dynamic_FACE5" block="Surprise"
-		dynamic_FACE5,
-		//% blockId="dynamic_FACE5" block="Tongue"
-		dynamic_FACE6,
-		//% blockId="dynamic_FACE5" block="Pout"
-		dynamic_FACE7,	
     }
 
     //张大嘴巴
