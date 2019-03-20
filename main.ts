@@ -229,68 +229,18 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth0);
                 break; 
             } 
-            /*case enExpression.FACE2: { 
+            case dynamicExpression.dynamic_FACE2: { 
                 //statements; 
-                grin[0] = grin1[0];
+                Open_mouth1[0] = Open_mouth11[0];
                 for (let i = 1; i < 17; i += 2) {
-                    grin[i] = grin1[i + 1];
-                    grin[i + 1] = grin1[i];
+                    Open_mouth1[i] = Open_mouth11[i + 1];
+                    Open_mouth1[i + 1] = Open_mouth11[i];
                 }
            
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, grin);
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
                 break; 
             } 
-            case enExpression.FACE3: { 
-                sad[0] = sad1[0];
-                for (let i = 1; i < 17; i += 2) {
-                    sad[i] = sad1[i + 1];
-                    sad[i + 1] = sad1[i];
-                }
-            
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, sad);
-                break; 
-            } 
-            case enExpression.FACE4: { 
-                cry[0] = cry1[0];
-                for (let i = 1; i < 17; i += 2) {
-                    cry[i] = cry1[i + 1];
-                    cry[i + 1] = cry1[i];
-                }
-                
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, cry);
-                break; 
-             } 
-			 case enExpression.FACE5: { 
-                Surprise[0] = Surprise1[0];
-                for (let i = 1; i < 17; i += 2) {
-                    Surprise[i] = Surprise1[i + 1];
-                    Surprise[i + 1] = Surprise1[i];
-                }
-                
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, Surprise);
-                break; 
-             } 
-			 case enExpression.FACE6: { 
-                Tongue[0] = Tongue1[0];
-                for (let i = 1; i < 17; i += 2) {
-                    Tongue[i] = Tongue1[i + 1];
-                    Tongue[i + 1] = Tongue1[i];
-                }
-                
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, Tongue);
-                break; 
-             }
-			 case enExpression.FACE7: { 
-                Pout[0] = Pout1[0];
-                for (let i = 1; i < 17; i += 2) {
-                    Pout[i] = Pout1[i + 1];
-                    Pout[i + 1] = Pout1[i];
-                }
-                
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, Pout);
-                break; 
-             }
-			 */
+			 
             default: { 
                //statements; 
                break; 
