@@ -211,7 +211,8 @@ namespace LEDBit {
          } 
     }
 	
-	
+	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index"
+    //% weight=99
 	//显示动态图案
 	export function LEDdynamic(index: enExpression): void {
         if (!initMatrix) {
