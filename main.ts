@@ -140,10 +140,10 @@ namespace LEDBit {
                 break; 
              } 
 			 case enExpression.FACE5: { 
-                cry[0] = cry1[0];
+                Surprise[0] = Surprise1[0];
                 for (let i = 1; i < 17; i += 2) {
-                    cry[i] = cry1[i + 1];
-                    cry[i + 1] = cry1[i];
+                    Surprise[i] = Surprise1[i + 1];
+                    Surprise[i + 1] = Surprise1[i];
                 }
                 
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Surprise);
