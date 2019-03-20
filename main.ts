@@ -202,7 +202,7 @@ namespace LEDBit {
     }
 	
 	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index"
-    //% weight=99
+    //% weight=98
 	export function LEDdynamic(index: dynamicenExpression): void {
         if (!initMatrix) {
             matrixInit();
@@ -240,7 +240,7 @@ namespace LEDBit {
 
     //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
     //% x.min=1 x.max=15 y.min=0 y.max=7
-    //% weight=98
+    //% weight=97
     export function LEDDraw(x: number, y: number, on: enState): void {
         if (!initMatrix) {
             matrixInit();
@@ -258,7 +258,7 @@ namespace LEDBit {
 
 
     //% blockId=ledbit_led_clear block="LED expression Clear"
-    //% weight=97
+    //% weight=96
     export function LEDClear(): void {
         if (!initMatrix) {
             matrixInit();
@@ -271,7 +271,7 @@ namespace LEDBit {
     }
 
     //% blockId=ledbit_led_AllOn block="Matrix All On"
-    //% weight=96
+    //% weight=95
     //% blockGap=50
     export function LEDAllOn(): void {
         if (!initMatrix) {
