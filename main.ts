@@ -41,7 +41,7 @@ namespace LEDBit {
 		FACE5,
 		//% blockId="FACE5" block="Tongue"
 		FACE6,
-		//% blockId="FACE5" block="Tongue"
+		//% blockId="FACE5" block="Pout"
 		FACE7,
 		
     }
