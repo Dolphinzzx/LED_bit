@@ -64,18 +64,25 @@ namespace LEDBit {
 
     //动态表情
     export enum dynamicExpression { 
-        //% blockId="dynamic_FACE1" block="Open_mouth0"
+        //% blockId="dynamic_FACE1" block="Open_mouth"
         dynamic_FACE1 = 0,
-        //% blockId="dynamic_FACE2" block="Open_mouth1"
+        //% blockId="dynamic_FACE2" block="Naughty"
         dynamic_FACE2,
     }
 
     //张大嘴巴
-     let Open_mouth0 = pins.createBuffer(17);
-     let Open_mouth1 = pins.createBuffer(17);
+    let Open_mouth0 = pins.createBuffer(17);
+    let Open_mouth1 = pins.createBuffer(17);
 	 
-     let Open_mouth01:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3,0xc0,0x4,0x20,0x8,0x10,0x4,0x20,0x3,0xc0];
-     let Open_mouth11:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x7,0xe0,0xf,0xf0,0x7,0xe0,0x0,0x0];
+    let Open_mouth01:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3,0xc0,0x4,0x20,0x8,0x10,0x4,0x20,0x3,0xc0];
+    let Open_mouth11:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x7,0xe0,0xf,0xf0,0x7,0xe0,0x0,0x0];
+
+    //调皮吐舌
+    let Naughty0 = pins.createBuffer(17);
+    let Naughty1 = pins.createBuffer(17);
+	 
+    let Naughty01:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf,0xf0,0x0,0x0,0x0,0x0,0x0,0x0];
+    let Naughty11:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf,0xf0,0x3,0xc0,0x1,0x80,0x1,0x80];
 
 
 
@@ -237,17 +244,28 @@ namespace LEDBit {
 				
                 break; 
             } 
-            /*case dynamicExpression.dynamic_FACE2: { 
+            case dynamicExpression.dynamic_FACE2: { 
                 //statements; 
-                Open_mouth1[0] = Open_mouth11[0];
+                Naughty0[0] = Naughty01[0];
                 for (let i = 1; i < 17; i += 2) {
-                    Open_mouth1[i] = Open_mouth11[i + 1];
-                    Open_mouth1[i + 1] = Open_mouth11[i];
+                    Naughty0[i] = Naughty01[i + 1];
+                    Naughty0[i + 1] = Naughty01[i];
                 }
            
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Naughty0);
+				basic.pause(1000);
+				
+				Naughty1[0] = Naughty11[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Naughty1[i] = Naughty11[i + 1];
+                    Naughty1[i + 1] = Naughty11[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Naughty1);
+				basic.pause(1000);
+				
                 break; 
-            }*/ 
+            } 
 			 
             default: { 
                //statements; 
