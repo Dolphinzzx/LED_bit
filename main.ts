@@ -325,6 +325,8 @@ namespace LEDBit {
            
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying4);
 				basic.pause(600);
+				 break; 
+			}
 			 
             default: { 
                //statements; 
