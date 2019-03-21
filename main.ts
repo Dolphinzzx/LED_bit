@@ -222,7 +222,8 @@ namespace LEDBit {
                 }
 
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth0);
-				control.waitMicros(7000);
+				//control.waitMicros(7000);
+				basic.pause(1);
 				
 				Open_mouth1[0] = Open_mouth11[0];
                 for (let i = 1; i < 17; i += 2) {
@@ -231,7 +232,8 @@ namespace LEDBit {
                 }
    
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
-				control.waitMicros(7000);
+				//control.waitMicros(7000);
+				basic.pause(1);
 				
                 break; 
             } 
