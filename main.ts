@@ -68,7 +68,7 @@ namespace LEDBit {
         dynamic_FACE1 = 0,
         //% blockId="dynamic_FACE2" block="Naughty"
         dynamic_FACE2,
-		//% blockId="dynamic_FACE2" block="Naughty"
+		//% blockId="dynamic_FACE2" block="Crying"
         dynamic_FACE3,
     }
 
