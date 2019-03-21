@@ -208,7 +208,7 @@ namespace LEDBit {
 	 
 	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index_1"
     //% weight=98
-	export function LEDdynamic(index_1: dynamicenExpression): void {
+	export function LEDdynamic(index_1: dynamicExpression): void {
         if (!initMatrix) {
             matrixInit();
             initMatrix = true;
@@ -222,9 +222,17 @@ namespace LEDBit {
                 }
 
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth0);
+				
+				Open_mouth1[0] = Open_mouth11[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Open_mouth1[i] = Open_mouth11[i + 1];
+                    Open_mouth1[i + 1] = Open_mouth11[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
                 break; 
             } 
-            case dynamicExpression.dynamic_FACE2: { 
+            /*case dynamicExpression.dynamic_FACE2: { 
                 //statements; 
                 Open_mouth1[0] = Open_mouth11[0];
                 for (let i = 1; i < 17; i += 2) {
@@ -234,7 +242,7 @@ namespace LEDBit {
            
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
                 break; 
-            } 
+            }*/ 
 			 
             default: { 
                //statements; 
