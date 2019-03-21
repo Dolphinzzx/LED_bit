@@ -253,7 +253,7 @@ namespace LEDBit {
                 }
            
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Naughty0);
-				basic.pause(1000);
+				basic.pause(600);
 				
 				Naughty1[0] = Naughty11[0];
                 for (let i = 1; i < 17; i += 2) {
@@ -262,7 +262,7 @@ namespace LEDBit {
                 }
            
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Naughty1);
-				basic.pause(1000);
+				basic.pause(600);
 				
                 break; 
             } 
