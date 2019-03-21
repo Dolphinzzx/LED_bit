@@ -68,6 +68,8 @@ namespace LEDBit {
         dynamic_FACE1 = 0,
         //% blockId="dynamic_FACE2" block="Naughty"
         dynamic_FACE2,
+		//% blockId="dynamic_FACE2" block="Naughty"
+        dynamic_FACE3,
     }
 
     //张大嘴巴
@@ -84,10 +86,20 @@ namespace LEDBit {
     let Naughty01:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf,0xf0,0x0,0x0,0x0,0x0,0x0,0x0];
     let Naughty11:number[] = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xf,0xf0,0x3,0xc0,0x1,0x80,0x1,0x80];
 
+	//哇哇大哭
+    let Crying0 = pins.createBuffer(17);
+    let Crying1 = pins.createBuffer(17);
+	let Crying2 = pins.createBuffer(17);
+	let Crying3 = pins.createBuffer(17);
+	let Crying4 = pins.createBuffer(17);
+	
+	let Crying01:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x0,0x0,0x0,0x0,0x3,0xc0,0x4,0x20,0x8,0x10];
+    let Crying11:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x10,0x8,0x0,0x0,0x3,0xc0,0x4,0x20,0x8,0x10];
+    let Crying21:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x10,0x8,0x0,0x0,0x0,0x0,0x7,0xe0,0x8,0x10];
+    let Crying31:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x0,0x0,0x10,0x8,0x0,0x0,0x7,0xe0,0x8,0x10];
+	let Crying41:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x0,0x0,0x0,0x0,0x10,0x8,0x0,0x0,0xf,0xf0];
 
-
-
-
+	
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
         buf[0] = reg
@@ -266,6 +278,53 @@ namespace LEDBit {
 				
                 break; 
             } 
+			
+			case dynamicExpression.dynamic_FACE3: { 
+                //statements; 
+                Crying0[0] = Crying01[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Crying0[i] = Crying01[i + 1];
+                    Crying0[i + 1] = Crying01[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying0);
+				basic.pause(600);
+				
+			    Crying1[0] = Crying11[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Crying1[i] = Crying11[i + 1];
+                    Crying1[i + 1] = Crying11[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying1);
+				basic.pause(600);
+				
+				Crying2[0] = Crying21[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Crying2[i] = Crying21[i + 1];
+                    Crying2[i + 1] = Crying21[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying2);
+				basic.pause(600);
+			
+				Crying3[0] = Crying31[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Crying3[i] = Crying31[i + 1];
+                    Crying3[i + 1] = Crying31[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying3);
+				basic.pause(600);
+			
+				Crying4[0] = Crying41[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Crying4[i] = Crying41[i + 1];
+                    Crying4[i + 1] = Crying41[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying4);
+				basic.pause(600);
 			 
             default: { 
                //statements; 
