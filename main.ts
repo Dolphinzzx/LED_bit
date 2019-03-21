@@ -228,8 +228,9 @@ namespace LEDBit {
                     Open_mouth1[i] = Open_mouth11[i + 1];
                     Open_mouth1[i + 1] = Open_mouth11[i];
                 }
-           
+   
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth1);
+				control.waitMicros(3000);
                 break; 
             } 
             /*case dynamicExpression.dynamic_FACE2: { 
