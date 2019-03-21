@@ -222,7 +222,7 @@ namespace LEDBit {
                 }
 
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Open_mouth0);
-				
+				control.waitMicros(1000);
 				Open_mouth1[0] = Open_mouth11[0];
                 for (let i = 1; i < 17; i += 2) {
                     Open_mouth1[i] = Open_mouth11[i + 1];
