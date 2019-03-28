@@ -21,15 +21,15 @@ namespace LEDBit {
 	let matBuf = pins.createBuffer(17);
 	let initMatrix = false
 
-    export enum enState { 
-         //% blockId="OFF" block="OFF"
-         OFF = 0,
-         //% blockId="ON" block="ON"
-         ON = 1
+	export enum enState { 
+		 //% blockId="OFF" block="OFF"
+		 OFF = 0,
+		 //% blockId="ON" block="ON"
+		 ON = 1
     }
 
     //静态表情
-    export enum enExpression { 
+	export enum enExpression { 
 		//% blockId="FACE1" block="Smile"
 		FACE1 = 0,
 		//% blockId="FACE2" block="Grin"
@@ -45,7 +45,7 @@ namespace LEDBit {
 		//% blockId="FACE5" block="Pout"
 		FACE7,
 		
-    }
+	}
 	let smile = pins.createBuffer(17);
 	let grin = pins.createBuffer(17);
 	let sad = pins.createBuffer(17);
@@ -64,7 +64,7 @@ namespace LEDBit {
 
     
 	//数字
-    export enum numExpression { 
+	export enum numExpression { 
 		//% blockId="num_FACE1" block="num1"
 		num_FACE1 = 0,
 		//% blockId="num_FACE2" block="num2"
@@ -85,7 +85,7 @@ namespace LEDBit {
 		num_FACE9,
 		
 		
-    }
+	}
 	
 	let num1 = pins.createBuffer(17);
 	let num2 = pins.createBuffer(17);
