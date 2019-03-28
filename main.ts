@@ -210,8 +210,13 @@ namespace LEDBit {
 	let Y1:number[] = [0x0, 0x4,0x10,0x2,0x20,0x1,0x40,0x0,0x80,0x0,0x80,0x0,0x80,0x0,0x80,0x0,0x80];
 	let Z1:number[] = [0x0, 0x1f,0xe0,0x8,0x0,0x4,0x0,0x2,0x0,0x1,0x0,0x0,0x80,0x0,0x40,0x1f,0xe0];
 	
-	
-	
+	//静态图案
+    export enum pictureExpression { 
+        //% blockId="picture_FACE1" block="Big_heart"
+        picture_FACE1 = 0,
+		}
+	let Big_heart = pins.createBuffer(17);
+	let Big_heart1:number[] = [0x0, 0xc,0x60,0x1e,0xf0,0x1f,0xf0,0x1f,0xf0,0xf,0xe0,0x7,0xc0,0x3,0x80,0x1,0x0];
 	
 	
     function i2cwrite(addr: number, reg: number, value: number) {
@@ -707,7 +712,31 @@ namespace LEDBit {
          } 
     }
 
+	//% blockId=ledbit_led_picture block="LED picture Show|%index_3"
+    //% weight=96
+    export function LEDpicture(index_3: pictureExpression): void {
+        if (!initMatrix) {
+            matrixInit();
+            initMatrix = true;
+        }
+        switch(index_3) { 
+            case pictureExpression.FACE1: { 
+                Big_heart[0] = Big_heart1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Big_heart[i] = Big_heart1[i + 1];
+                    Big_heart[i + 1] = Big_heart1[i];
+                }
 
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Big_heart);
+                break; 
+            } 
+	
+		default: { 
+               //statements; 
+               break; 
+            } 
+        } 
+    }
 	
     //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
     //% x.min=1 x.max=15 y.min=0 y.max=7
