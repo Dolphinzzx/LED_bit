@@ -468,7 +468,7 @@ namespace LEDBit {
      */
 	 
 	 //% blockId=ledbit_led_number block="LED numberexpression Show|%index_3"
-    //% weight=99
+    //% weight=97
     export function LEDnumber(index_3: numberExpression): void {
         if (!initMatrix) {
             matrixInit();
@@ -505,7 +505,7 @@ namespace LEDBit {
     }
 	
 	   //% blockId=ledbit_led_character block="LED character Show|%index_2"
-    //% weight=97
+    //% weight=96
     export function LEDcharacter(index_2: characterExpression): void {
         if (!initMatrix) {
             matrixInit();
