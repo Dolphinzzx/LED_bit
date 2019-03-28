@@ -349,7 +349,7 @@ namespace LEDBit {
 	
 	/**
      * *****************************************************************
-     * @param index
+     * @param index_1
      */
 	 
 	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index_1"
@@ -501,10 +501,14 @@ namespace LEDBit {
                //statements; 
                break; 
             } 
-         } 
+        } 
     }
 	
-	   //% blockId=ledbit_led_character block="LED character Show|%index_2"
+	/**
+     * *****************************************************************
+     * @param index_2
+     */
+	//% blockId=ledbit_led_character block="LED character Show|%index_2"
     //% weight=96
     export function LEDcharacter(index_2: characterExpression): void {
         if (!initMatrix) {
