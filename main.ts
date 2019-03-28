@@ -101,18 +101,23 @@ namespace LEDBit {
 
 	//英文字母
 	export enum characterExpression { 
-        //% blockId="dynamic_FACE1" block="Open_mouth"
+        //% blockId="character_FACE1" block="A"
         character_FACE1 = 0,
-        //% blockId="dynamic_FACE2" block="Naughty"
+        //% blockId="character_FACE2" block="B"
         character_FACE2,
-		//% blockId="dynamic_FACE2" block="Crying"
+		//% blockId="character_FACE3" block="C"
         character_FACE3,
-		//% blockId="dynamic_FACE2" block="Crying"
+		//% blockId="character_FACE4" block="D"
         character_FACE4,
+		//% blockId="character_FACE5" block="E"
 		character_FACE5,
+		//% blockId="character_FACE6" block="F"
 		character_FACE6,
+		//% blockId="character_FACE7" block="G"
 		character_FACE7,
+		//% blockId="character_FACE8" block="H"
 		character_FACE8,
+		//% blockId="character_FACE9" block="I"
 		character_FACE9,
 		
     }
