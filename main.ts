@@ -212,9 +212,10 @@ namespace LEDBit {
 	
 	//静态图案
     export enum pictureExpression { 
-        //% blockId="picture_FACE1" block="Big_heart"
+        //% blockId="pic_FACE1" block="Big_heart"
         picture_FACE1 = 0,
 		}
+		
 	let Big_heart = pins.createBuffer(17);
 	let Big_heart1:number[] = [0x0, 0xc,0x60,0x1e,0xf0,0x1f,0xf0,0x1f,0xf0,0xf,0xe0,0x7,0xc0,0x3,0x80,0x1,0x0];
 	
@@ -712,15 +713,15 @@ namespace LEDBit {
          } 
     }
 
-	//% blockId=ledbit_led_picture block="LED picture Show|%index_3"
+	//% blockId=ledbit_led_pic block="LED pic Show|%index_3"
     //% weight=96
-    export function LEDpicture(index_3: pictureExpression): void {
+    export function LEDpic(index_3: picExpression): void {
         if (!initMatrix) {
             matrixInit();
             initMatrix = true;
         }
         switch(index_3) { 
-            case pictureExpression.FACE1: { 
+            case picExpression.FACE1: { 
                 Big_heart[0] = Big_heart1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Big_heart[i] = Big_heart1[i + 1];
