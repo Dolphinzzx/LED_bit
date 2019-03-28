@@ -375,6 +375,7 @@ namespace LEDBit {
 	
 	   //% blockId=ledbit_led_show block="LED character Show|%index"
     //% weight=99
+	//
     export function LEDcharacter(index_2: character): void {
         if (!initMatrix) {
             matrixInit();
