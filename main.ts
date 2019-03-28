@@ -404,7 +404,7 @@ namespace LEDBit {
 			}
 			default: { 
 			   //statements; 
-			   break; 
+				break; 
 			} 
 		} 
 	}
@@ -443,7 +443,7 @@ namespace LEDBit {
 				//control.waitMicros(7000);
 				basic.pause(1000);
 				
-                break; 
+				break; 
             } 
 			case dynamicExpression.dynamic_FACE2: { 
 				//statements; 
@@ -514,12 +514,12 @@ namespace LEDBit {
 
 				pins.i2cWriteBuffer(HT16K33_ADDRESS, Crying4);
 				basic.pause(600);
-				 break; 
+				break; 
 			}
 			 
             default: { 
                //statements; 
-               break; 
+				break; 
 			} 
 		} 
 	}
@@ -566,7 +566,7 @@ namespace LEDBit {
 			}
 
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, C);
-			break; 
+				break; 
 			} 
 			case characterExpression.character_FACE4: { 
 			D[0] = D1[0];
@@ -576,7 +576,7 @@ namespace LEDBit {
 			}
 
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, D);
-			break; 
+				break; 
 			} 
 			case characterExpression.character_FACE5: { 
 			E[0] = E1[0];
@@ -586,7 +586,7 @@ namespace LEDBit {
 			}
 
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, E);
-			break; 
+				break; 
 			} 
 			case characterExpression.character_FACE6: { 
 			F[0] = F1[0];
@@ -595,7 +595,7 @@ namespace LEDBit {
 				F[i + 1] = F1[i];
 			}
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, F);
-			break; 
+				break; 
 			} 
 			  
 			case characterExpression.character_FACE7: { 
@@ -605,7 +605,7 @@ namespace LEDBit {
 				G[i + 1] = G1[i];
 			}
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, G);
-			break; 
+				break; 
 			} 
 			case characterExpression.character_FACE8: { 
 			H[0] = H1[0];
@@ -614,7 +614,7 @@ namespace LEDBit {
 				H[i + 1] = H1[i];
 			}
 			pins.i2cWriteBuffer(HT16K33_ADDRESS, H);
-			break; 
+				break; 
 			} 
 			
 			case characterExpression.character_FACE9: { 
@@ -782,7 +782,7 @@ namespace LEDBit {
 			} 			
 			default: { 
 			   //statements; 
-			   break; 
+				break; 
 			} 
 		} 
 	}
@@ -905,7 +905,7 @@ namespace LEDBit {
 
 			default: { 
 			   //statements; 
-			   break; 
+				break; 
 			} 
 		} 
 	}
@@ -982,7 +982,7 @@ namespace LEDBit {
 
 			default: { 
 			   //statements; 
-			   break; 
+				break; 
 			} 
 		} 
 	}
