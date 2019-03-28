@@ -62,7 +62,23 @@ namespace LEDBit {
     let Tongue1:number[] = [0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x10, 0x8, 0xf, 0xf0, 0xe, 0x0, 0x4, 0x0, 0x0, 0x0];
 	let Pout1:number[] = [0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1f, 0xf8, 0x8, 0x10, 0x4, 0x20, 0x3, 0xc0];
 
-    //动态表情
+    
+	//数字
+    export enum numberExpression { 
+        //% blockId="number_FACE1" block="number_1"
+        FACE1 = 0,
+        //% blockId="number_FACE2" block="number_2"
+        FACE2,
+		
+    }
+	
+	let number_1 = pins.createBuffer(17);
+    let number_2 = pins.createBuffer(17);
+	
+	let number_1:number[] = [0x0, 0x1, 0x0, 0x1, 0x80, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x7, 0xc0];
+    let number_2:number[] = [0x0, 0x1, 0xc0, 0x2, 0x20, 0x2, 0x0, 0x1, 0x0, 0x0, 0x80, 0x0, 0x40, 0x0, 0x20, 0x3, 0xf0];
+	
+	//动态表情
     export enum dynamicExpression { 
         //% blockId="dynamic_FACE1" block="Open_mouth"
         dynamic_FACE1 = 0,
@@ -446,6 +462,47 @@ namespace LEDBit {
          } 
     }
 	
+	 /**
+     * *****************************************************************
+     * @param index_3
+     */
+	 
+	 //% blockId=ledbit_led_show block="LED expression Show|%index_3"
+    //% weight=99
+    export function LEDnumber(index_3: numberExpression): void {
+        if (!initMatrix) {
+            matrixInit();
+            initMatrix = true;
+        }
+        switch(index) { 
+            case numberExpression.FACE1: { 
+                number_1[0] = number_11[0];
+                for (let i = 1; i < 17; i += 2) {
+                    number_1[i] = number_11[i + 1];
+                    number_1[i + 1] = number_11[i];
+                }
+
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, number_1);
+                break; 
+            } 
+            case numberExpression.FACE2: { 
+                //statements; 
+                number_2[0] = number_21[0];
+                for (let i = 1; i < 17; i += 2) {
+                    number_2[i] = number_21[i + 1];
+                    number_2[i + 1] = number_21[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, number_2);
+                break; 
+            } 
+            
+            default: { 
+               //statements; 
+               break; 
+            } 
+         } 
+    }
 	
 	   //% blockId=ledbit_led_character block="LED character Show|%index_2"
     //% weight=97
