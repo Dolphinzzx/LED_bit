@@ -100,7 +100,7 @@ namespace LEDBit {
 	let Crying41:number[] = [0x0,0x18,0x18,0x18,0x18,0x10,0x8,0x0,0x0,0x0,0x0,0x10,0x8,0x0,0x0,0xf,0xf0];
 
 	//英文字母
-	export enum character { 
+	export enum characterExpression { 
         //% blockId="dynamic_FACE1" block="Open_mouth"
         character_FACE1 = 0,
         //% blockId="dynamic_FACE2" block="Naughty"
@@ -373,9 +373,8 @@ namespace LEDBit {
     }
 	
 	
-	   //% blockId=ledbit_led_show block="LED character Show|%index"
-    //% weight=99
-	//
+	   //% blockId=ledbit_led_show block="LED character Show|%index_2"
+    //% weight=97
     export function LEDcharacter(index_2: character): void {
         if (!initMatrix) {
             matrixInit();
@@ -470,7 +469,7 @@ namespace LEDBit {
 
     //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
     //% x.min=1 x.max=15 y.min=0 y.max=7
-    //% weight=97
+    //% weight=96
     export function LEDDraw(x: number, y: number, on: enState): void {
         if (!initMatrix) {
             matrixInit();
@@ -488,7 +487,7 @@ namespace LEDBit {
 
 
     //% blockId=ledbit_led_clear block="LED expression Clear"
-    //% weight=96
+    //% weight=95
     export function LEDClear(): void {
         if (!initMatrix) {
             matrixInit();
@@ -501,7 +500,7 @@ namespace LEDBit {
     }
 
     //% blockId=ledbit_led_AllOn block="Matrix All On"
-    //% weight=95
+    //% weight=94
     //% blockGap=50
     export function LEDAllOn(): void {
         if (!initMatrix) {

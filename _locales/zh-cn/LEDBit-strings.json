@@ -17,13 +17,13 @@
   "LEDBit.dynamicExpression.dynamic_FACE1|block": "张开嘴巴",
   "LEDBit.dynamicExpression.dynamic_FACE2|block": "调皮吐舌",
   "LEDBit.dynamicExpression.dynamic_FACE3|block": "哇哇大哭",
-  "LEDBit.character.character_FACE1|block": "A",
-  "LEDBit.character.character_FACE2|block": "B",
-  "LEDBit.character.character_FACE3|block": "C",
-  "LEDBit.character.character_FACE4|block": "D",
-  "LEDBit.character.character_FACE5|block": "E",
-  "LEDBit.character.character_FACE6|block": "F",
-  "LEDBit.character.character_FACE7|block": "G",
-  "LEDBit.character.character_FACE8|block": "H",
-  "LEDBit.character.character_FACE9|block": "I"
+  "LEDBit.characterExpression.character_FACE1|block": "A",
+  "LEDBit.characterExpression.character_FACE2|block": "B",
+  "LEDBit.characterExpression.character_FACE3|block": "C",
+  "LEDBit.characterExpression.character_FACE4|block": "D",
+  "LEDBit.characterExpression.character_FACE5|block": "E",
+  "LEDBit.characterExpression.character_FACE6|block": "F",
+  "LEDBit.characterExpression.character_FACE7|block": "G",
+  "LEDBit.characterExpression.character_FACE8|block": "H",
+  "LEDBit.characterExpression.character_FACE9|block": "I"
 }
