@@ -732,7 +732,7 @@ namespace LEDBit {
      * @param index_3
      */
 	 
-	 //% blockId=ledbit_led_num block="LED numexpression Show|%index_3"
+	 //% blockId=ledbit_led_num block="LED num Show|%index_3"
     //% weight=96
     export function LEDnum(index_3: numExpression): void {
         if (!initMatrix) {
