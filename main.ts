@@ -28,7 +28,7 @@ namespace LEDBit {
 		 ON = 1
     }
 
-    //静态表情
+	//静态表情
 	export enum enExpression { 
 		//% blockId="FACE1" block="Smile"
 		FACE1 = 0,
@@ -110,14 +110,14 @@ namespace LEDBit {
 
 	
 	//动态表情
-    export enum dynamicExpression { 
+	export enum dynamicExpression { 
 		//% blockId="dynamic_FACE1" block="Open_mouth"
 		dynamic_FACE1 = 0,
 		//% blockId="dynamic_FACE2" block="Naughty"
 		dynamic_FACE2,
 		//% blockId="dynamic_FACE2" block="Crying"
 		dynamic_FACE3,
-    }
+	}
 
 	//张大嘴巴
 	let Open_mouth0 = pins.createBuffer(17);
@@ -201,7 +201,7 @@ namespace LEDBit {
 		//% blockId="character_FACE26" block="Z"
 		character_FACE26,
 		
-    }
+	}
 	
 	let A = pins.createBuffer(17);
 	let B = pins.createBuffer(17);
@@ -258,7 +258,7 @@ namespace LEDBit {
 	let Z1:number[] = [0x0, 0x1f,0xe0,0x8,0x0,0x4,0x0,0x2,0x0,0x1,0x0,0x0,0x80,0x0,0x40,0x1f,0xe0];
 	
 	//静态图案
-    export enum pictureExpression { 
+	export enum pictureExpression { 
 		//% blockId="picture_FACE1" block="Big_heart"
 		picture_FACE1 = 0,
 		//% blockId="picture_FACE2" block="Boat"
@@ -272,7 +272,7 @@ namespace LEDBit {
 		//% blockId="picture_FACE6" block="House"
 		picture_FACE6,
 		
-    }
+	}
 	
 	let Big_heart = pins.createBuffer(17);
 	let Boat = pins.createBuffer(17);
@@ -444,7 +444,7 @@ namespace LEDBit {
 				basic.pause(1000);
 				
 				break; 
-            } 
+			} 
 			case dynamicExpression.dynamic_FACE2: { 
 				//statements; 
 				Naughty0[0] = Naughty01[0];
@@ -517,8 +517,8 @@ namespace LEDBit {
 				break; 
 			}
 			 
-            default: { 
-               //statements; 
+			default: { 
+				//statements; 
 				break; 
 			} 
 		} 
@@ -794,12 +794,12 @@ namespace LEDBit {
      * @param index_3
      */
 	 
-	 //% blockId=ledbit_led_num block="LED num Show|%index_3"
-    //% weight=96
-    export function LEDnum(index_3: numExpression): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
+	//% blockId=ledbit_led_num block="LED num Show|%index_3"
+	//% weight=96
+	export function LEDnum(index_3: numExpression): void {
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
         }
         switch(index_3) { 
 			case numExpression.num_FACE1: { 
@@ -911,12 +911,12 @@ namespace LEDBit {
 	}
 	
 	//% blockId=ledbit_led_picture block="LED picture Show|%index_4"
-    //% weight=95
-    export function LEDpicture(index_4: pictureExpression): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
+	//% weight=95
+	export function LEDpicture(index_4: pictureExpression): void {
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
+		}
         switch(index_4) { 
 			case pictureExpression.picture_FACE1: { 
 				Big_heart[0] = Big_heart1[0];
@@ -987,22 +987,22 @@ namespace LEDBit {
 		} 
 	}
 	
-    //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
-    //% x.min=1 x.max=15 y.min=0 y.max=7
-    //% weight=94
-    export function LEDDraw(x: number, y: number, on: enState): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
-        let idx = y * 2 + x / 8;
-        let tmp = matBuf[idx + 1];
-        if(on == enState.ON)
-            tmp |= (1 << (x % 8));
-        else
-            tmp &= ~(1 << (x % 8));
-        matBuf[idx + 1] = tmp;
-        matrixShow();
+	//% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
+	//% x.min=1 x.max=15 y.min=0 y.max=7
+	//% weight=94
+	export function LEDDraw(x: number, y: number, on: enState): void {
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
+		}
+		let idx = y * 2 + x / 8;
+		let tmp = matBuf[idx + 1];
+		if(on == enState.ON)
+			tmp |= (1 << (x % 8));
+		else
+			tmp &= ~(1 << (x % 8));
+		matBuf[idx + 1] = tmp;
+		matrixShow();
     }
 
 
@@ -1019,20 +1019,17 @@ namespace LEDBit {
         matrixShow();
     }
 
-    //% blockId=ledbit_led_AllOn block="Matrix All On"
-    //% weight=92
-    //% blockGap=50
-    export function LEDAllOn(): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
-        for (let i = 0; i < 16; i++) {
-            matBuf[i + 1] = 0xff;
-        }
-        matrixShow();
-    }
-    
-    
-
+	//% blockId=ledbit_led_AllOn block="Matrix All On"
+	//% weight=92
+	//% blockGap=50
+	export function LEDAllOn(): void {
+		if (!initMatrix) {
+			matrixInit();
+		initMatrix = true;
+		}
+		for (let i = 0; i < 16; i++) {
+			matBuf[i + 1] = 0xff;
+		}
+		matrixShow();
+	}
 }
