@@ -381,7 +381,7 @@ namespace LEDBit {
             initMatrix = true;
         }
         switch(index_2) { 
-            case character.FACE1: { 
+            case characterExpression.character_FACE1: { 
                 A[0] = A1[0];
                 for (let i = 1; i < 17; i += 2) {
                     A[i] = A1[i + 1];
@@ -391,7 +391,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, A);
                 break; 
             } 
-              case character.FACE2: { 
+              case characterExpression.character_FACE2: { 
                 B[0] = B1[0];
                 for (let i = 1; i < 17; i += 2) {
                     A[i] = A1[i + 1];
@@ -401,7 +401,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, B);
                 break; 
             } 
-               case character.FACE3: { 
+               case characterExpression.character_FACE3: { 
                 C[0] = C1[0];
                 for (let i = 1; i < 17; i += 2) {
                     C[i] = C1[i + 1];
@@ -411,7 +411,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, C);
                 break; 
             } 
-			   case character.FACE4: { 
+			   case characterExpression.character_FACE4: { 
                 D[0] = D1[0];
                 for (let i = 1; i < 17; i += 2) {
                     D[i] = D1[i + 1];
@@ -421,7 +421,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, D);
                 break; 
             } 
-			   case character.FACE5: { 
+			   case characterExpression.character_FACE5: { 
                 E[0] = E1[0];
                 for (let i = 1; i < 17; i += 2) {
                     E[i] = E1[i + 1];
@@ -431,7 +431,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, E);
                 break; 
             } 
-			   case character.FACE6: { 
+			   case characterExpression.character_FACE6: { 
                 F[0] = F1[0];
                 for (let i = 1; i < 17; i += 2) {
                     F[i] = F1[i + 1];
@@ -441,7 +441,7 @@ namespace LEDBit {
                 break; 
             } 
 			  
-               case character.FACE7: { 
+               case characterExpression.character_FACE7: { 
                 G[0] = G1[0];
                 for (let i = 1; i < 17; i += 2) {
                     G[i] = G1[i + 1];
@@ -450,7 +450,7 @@ namespace LEDBit {
 				pins.i2cWriteBuffer(HT16K33_ADDRESS, G);
                 break; 
             } 
-			   case character.FACE7: { 
+			   case characterExpression.character_FACE8: { 
                 H[0] = H1[0];
                 for (let i = 1; i < 17; i += 2) {
                     H[i] = H1[i + 1];
