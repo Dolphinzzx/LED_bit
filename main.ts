@@ -269,13 +269,13 @@ namespace LEDBit {
         picture_FACE4,
 		//% blockId="picture_FACE5" block="Teapot"
 		picture_FACE5,
-		//% blockId="picture_FACE5" block="House"
+		//% blockId="picture_FACE6" block="House"
 		picture_FACE6,
 		
     }
 	
 	let Big_heart = pins.createBuffer(17);
-    let Boat1 = pins.createBuffer(17);
+    let Boat = pins.createBuffer(17);
     let Small_heart = pins.createBuffer(17);
     let Glass = pins.createBuffer(17);
 	let Teapot = pins.createBuffer(17);
@@ -920,7 +920,7 @@ namespace LEDBit {
             initMatrix = true;
         }
         switch(index_4) { 
-            case pictureExpression.FACE1: { 
+            case pictureExpression.picture_FACE1: { 
                 Big_heart[0] = Big_heart1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Big_heart[i] = Big_heart1[i + 1];
@@ -930,9 +930,9 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Big_heart);
                 break; 
             } 
-            case pictureExpression.FACE2: { 
+            case pictureExpression.picture_FACE2: { 
                 //statements; 
-                Boat[0] = grin1[0];
+                Boat[0] = Boat1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Boat[i] = Boat1[i + 1];
                     Boat[i + 1] = Boat1[i];
@@ -941,7 +941,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Boat);
                 break; 
             } 
-            case pictureExpression.FACE3: { 
+            case pictureExpression.picture_FACE3: { 
                 Small_heart[0] = Small_heart1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Small_heart[i] = Small_heart1[i + 1];
@@ -951,7 +951,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Small_heart);
                 break; 
             } 
-            case pictureExpression.FACE4: { 
+            case pictureExpression.picture_FACE4: { 
                 Glass[0] = Glass1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Glass[i] = Glass1[i + 1];
@@ -961,7 +961,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Glass);
                 break; 
             } 
-			 case pictureExpression.FACE5: { 
+			 case pictureExpression.picture_FACE5: { 
                 Teapot[0] = Teapot1[0];
                 for (let i = 1; i < 17; i += 2) {
                     Teapot[i] = Teapot1[i + 1];
@@ -971,7 +971,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, Teapot);
                 break; 
             } 
-			 case pictureExpression.FACE6: { 
+			 case pictureExpression.picture_FACE6: { 
                 House[0] = House1[0];
                 for (let i = 1; i < 17; i += 2) {
                     House[i] = House1[i + 1];
