@@ -210,6 +210,38 @@ namespace LEDBit {
 	let Y1:number[] = [0x0, 0x4,0x10,0x2,0x20,0x1,0x40,0x0,0x80,0x0,0x80,0x0,0x80,0x0,0x80,0x0,0x80];
 	let Z1:number[] = [0x0, 0x1f,0xe0,0x8,0x0,0x4,0x0,0x2,0x0,0x1,0x0,0x0,0x80,0x0,0x40,0x1f,0xe0];
 	
+	
+	
+	//静态图案
+    export enum pictureExpression { 
+        //% blockId="FACE1" block="Big_heart"
+        FACE1 = 0,
+        //% blockId="FACE2" block="Boat"
+        FACE2,
+        //% blockId="FACE3" block="Small_heart"
+        FACE3,
+        //% blockId="FACE4" block="Glass"
+        FACE4,
+		//% blockId="FACE5" block="Teapot"
+		FACE5,
+		//% blockId="FACE5" block="House"
+		FACE6,
+		
+    }
+    let Big_heart = pins.createBuffer(17);
+    let Boat = pins.createBuffer(17);
+    let Small_heart = pins.createBuffer(17);
+    let Glass = pins.createBuffer(17);
+	let Teapot = pins.createBuffer(17);
+	let House = pins.createBuffer(17);  
+	
+    let Big_heart1:number[] = [0x0, 0xc,0x60,0x1e,0xf0,0x1f,0xf0,0x1f,0xf0,0xf,0xe0,0x7,0xc0,0x3,0x80,0x1,0x0];
+    let Boat1:number[] = [0x0, 0x8,0x0,0xc,0x0,0xe,0x0,0x8,0x0,0x8,0x0,0x1f,0xf8,0xf,0xf0,0x7,0xe0];
+    let Small_heart1:number[] = [0x0, 0x0,0x0,0x6,0xc0,0xf,0xe0,0xf,0xe0,0x7,0xc0,0x3,0x80,0x1,0x0,0x0,0x0];
+    let Glass1:number[] = [0x0, 0x0,0x0,0x0,0x0,0xf,0xe0,0x4,0x38,0x4,0x24,0x4,0x24,0x4,0x38,0x7,0xe0];
+	let Teapot1:number[] = [0x0, 0x1,0x0,0x3,0x80,0x37,0xc0,0x48,0x2c,0x48,0x38,0x48,0x30,0x34,0x60,0x3,0x80];
+    let House1:number[] = [0x0, 0x1,0x0,0x2,0x80,0x4,0x40,0xf,0xe0,0x4,0x40,0x4,0x40,0x4,0x40,0x7,0xc0];
+	
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
         buf[0] = reg
@@ -703,9 +735,86 @@ namespace LEDBit {
          } 
     }
 
+
+	//% blockId=ledbit_led_picture block="LED pictureexpression Show|%index_3"
+    //% weight=96
+    export function LEDpicture(index_3: enExpression): void {
+        if (!initMatrix) {
+            matrixInit();
+            initMatrix = true;
+        }
+        switch(index) { 
+            case pictureExpression.FACE1: { 
+                Big_heart[0] = Big_heart1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Big_heart[i] = Big_heart1[i + 1];
+                    Big_heart[i + 1] = Big_heart1[i];
+                }
+
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Big_heart);
+                break; 
+            } 
+            case pictureExpression.FACE2: { 
+                //statements; 
+                Boat[0] = grin1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Boat[i] = Boat1[i + 1];
+                    Boat[i + 1] = Boat1[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Boat);
+                break; 
+            } 
+            case pictureExpression.FACE3: { 
+                Small_heart[0] = Small_heart1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Small_heart[i] = Small_heart1[i + 1];
+                    Small_heart[i + 1] = Small_heart1[i];
+                }
+            
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Small_heart);
+                break; 
+            } 
+            case pictureExpression.FACE4: { 
+                Glass[0] = Glass1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Glass[i] = Glass1[i + 1];
+                    Glass[i + 1] = Glass1[i];
+                }
+                
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Glass);
+                break; 
+             } 
+			 case pictureExpression.FACE5: { 
+                Teapot[0] = Teapot1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    Teapot[i] = Teapot1[i + 1];
+                    Teapot[i + 1] = Teapot1[i];
+                }
+                
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, Teapot);
+                break; 
+             } 
+			 case pictureExpression.FACE6: { 
+                House[0] = House1[0];
+                for (let i = 1; i < 17; i += 2) {
+                    House[i] = House1[i + 1];
+                    House[i + 1] = House1[i];
+                }
+                
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, House);
+                break; 
+             }
+		
+            default: { 
+               //statements; 
+               break; 
+            } 
+         } 
+    }
     //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
     //% x.min=1 x.max=15 y.min=0 y.max=7
-    //% weight=96
+    //% weight=95
     export function LEDDraw(x: number, y: number, on: enState): void {
         if (!initMatrix) {
             matrixInit();
@@ -723,7 +832,7 @@ namespace LEDBit {
 
 
     //% blockId=ledbit_led_clear block="LED expression Clear"
-    //% weight=95
+    //% weight=94
     export function LEDClear(): void {
         if (!initMatrix) {
             matrixInit();
@@ -736,7 +845,7 @@ namespace LEDBit {
     }
 
     //% blockId=ledbit_led_AllOn block="Matrix All On"
-    //% weight=94
+    //% weight=93
     //% blockGap=50
     export function LEDAllOn(): void {
         if (!initMatrix) {
