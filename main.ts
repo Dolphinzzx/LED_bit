@@ -289,35 +289,35 @@ namespace LEDBit {
 	let House1:number[] = [0x0, 0x1,0x0,0x2,0x80,0x4,0x40,0xf,0xe0,0x4,0x40,0x4,0x40,0x4,0x40,0x7,0xc0];
 	
 	
-    function i2cwrite(addr: number, reg: number, value: number) {
-        let buf = pins.createBuffer(2)
-        buf[0] = reg
-        buf[1] = value
-        pins.i2cWriteBuffer(addr, buf)
-    }
+	function i2cwrite(addr: number, reg: number, value: number) {
+		let buf = pins.createBuffer(2)
+		buf[0] = reg
+		buf[1] = value
+		pins.i2cWriteBuffer(addr, buf)
+	}
 
-    function i2ccmd(addr: number, value: number) {
-        let buf = pins.createBuffer(1)
-        buf[0] = value
-        pins.i2cWriteBuffer(addr, buf)
-    }
+	function i2ccmd(addr: number, value: number) {
+		let buf = pins.createBuffer(1)
+		buf[0] = value
+		pins.i2cWriteBuffer(addr, buf)
+	}
 
-    function i2cread(addr: number, reg: number) {
-        pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE);
-        let val = pins.i2cReadNumber(addr, NumberFormat.UInt8BE);
-        return val;
-    }
+	function i2cread(addr: number, reg: number) {
+		pins.i2cWriteNumber(addr, reg, NumberFormat.UInt8BE);
+		let val = pins.i2cReadNumber(addr, NumberFormat.UInt8BE);
+		return val;
+	}
 
-    function matrixInit() {
-        i2ccmd(HT16K33_ADDRESS, 0x21);// turn on oscillator
-        i2ccmd(HT16K33_ADDRESS, HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (0 << 1));
-        i2ccmd(HT16K33_ADDRESS, HT16K33_CMD_BRIGHTNESS | 0xF);
-    }
+	function matrixInit() {
+		i2ccmd(HT16K33_ADDRESS, 0x21);// turn on oscillator
+		i2ccmd(HT16K33_ADDRESS, HT16K33_BLINK_CMD | HT16K33_BLINK_DISPLAYON | (0 << 1));
+		i2ccmd(HT16K33_ADDRESS, HT16K33_CMD_BRIGHTNESS | 0xF);
+	}
 
-    function matrixShow() {
-        matBuf[0] = 0x00;
-        pins.i2cWriteBuffer(HT16K33_ADDRESS, matBuf);
-    }
+	function matrixShow() {
+		matBuf[0] = 0x00;
+		pins.i2cWriteBuffer(HT16K33_ADDRESS, matBuf);
+	}
     /**
      * *****************************************************************
      * @param index
@@ -415,12 +415,12 @@ namespace LEDBit {
      */
 	 
 	//% blockId=ledbit_led_dynamic block="LED dynamicexpression Show|%index_1"
-    //% weight=98
+	//% weight=98
 	export function LEDdynamic(index_1: dynamicExpression): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
+		}
         switch(index_1) { 
 			case dynamicExpression.dynamic_FACE1: { 
 				Open_mouth0[0] = Open_mouth01[0];
@@ -527,16 +527,16 @@ namespace LEDBit {
 	
 	
 	/**
-     * *****************************************************************
-     * @param index_2
-     */
+	 * *****************************************************************
+	 * @param index_2
+	 */
 	//% blockId=ledbit_led_character block="LED character Show|%index_2"
-    //% weight=97
-    export function LEDcharacter(index_2: characterExpression): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
+	//% weight=97
+	export function LEDcharacter(index_2: characterExpression): void {
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
+		}
         switch(index_2) { 
 			case characterExpression.character_FACE1: { 
 				A[0] = A1[0];
@@ -789,10 +789,10 @@ namespace LEDBit {
 
 
 
- /**
-     * *****************************************************************
-     * @param index_3
-     */
+	/**
+	 * *****************************************************************
+	 * @param index_3
+	 */
 	 
 	//% blockId=ledbit_led_num block="LED num Show|%index_3"
 	//% weight=96
@@ -1006,18 +1006,18 @@ namespace LEDBit {
     }
 
 
-    //% blockId=ledbit_led_clear block="LED expression Clear"
-    //% weight=93
-    export function LEDClear(): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
-        for (let i = 0; i < 16; i++) {
-            matBuf[i + 1] = 0;
-        }
-        matrixShow();
-    }
+	//% blockId=ledbit_led_clear block="LED expression Clear"
+	//% weight=93
+	export function LEDClear(): void {
+		if (!initMatrix) {
+			matrixInit();
+			initMatrix = true;
+		}
+		for (let i = 0; i < 16; i++) {
+			matBuf[i + 1] = 0;
+		}
+		matrixShow();
+	}
 
 	//% blockId=ledbit_led_AllOn block="Matrix All On"
 	//% weight=92
