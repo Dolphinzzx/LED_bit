@@ -66,9 +66,9 @@ namespace LEDBit {
 	//数字
     export enum numExpression { 
         //% blockId="num_FACE1" block="num_1"
-        FACE1 = 0,
+        num_FACE1 = 0,
         //% blockId="num_FACE2" block="num_2"
-        FACE2,
+        num_FACE2,
 		
     }
 	
