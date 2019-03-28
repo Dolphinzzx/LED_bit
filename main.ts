@@ -214,18 +214,18 @@ namespace LEDBit {
 	
 	//静态图案
     export enum pictureExpression { 
-        //% blockId="FACE1" block="Big_heart"
-        FACE1 = 0,
-        //% blockId="FACE2" block="Boat"
-        FACE2,
-        //% blockId="FACE3" block="Small_heart"
-        FACE3,
-        //% blockId="FACE4" block="Glass"
-        FACE4,
-		//% blockId="FACE5" block="Teapot"
-		FACE5,
-		//% blockId="FACE5" block="House"
-		FACE6,
+        //% blockId="picture_FACE1" block="Big_heart"
+        picture_FACE1 = 0,
+        //% blockId="picture_FACE2" block="Boat"
+        picture_FACE2,
+        //% blockId="picture_FACE3" block="Small_heart"
+        picture_FACE3,
+        //% blockId="picture_FACE4" block="Glass"
+        picture_FACE4,
+		//% blockId="picture_FACE5" block="Teapot"
+		picture_FACE5,
+		//% blockId="picture_FACE5" block="House"
+		picture_FACE6,
 		
     }
     let Big_heart = pins.createBuffer(17);

@@ -44,10 +44,10 @@
   "LEDBit.characterExpression.character_FACE24|block": "X",
   "LEDBit.characterExpression.character_FACE25|block": "Y",
   "LEDBit.characterExpression.character_FACE26|block": "Z",
-  "LEDBit.pictureExpression.character_FACE1|block": "大爱心",
-  "LEDBit.pictureExpression.character_FACE2|block": "帆船",
-  "LEDBit.pictureExpression.character_FACE3|block": "小爱心",
-  "LEDBit.pictureExpression.character_FACE4|block": "酒杯",
-  "LEDBit.pictureExpression.character_FACE5|block": "茶壶",
-  "LEDBit.pictureExpression.character_FACE6|block": "房子"
+  "LEDBit.pictureExpression.picture_FACE1|block": "大爱心",
+  "LEDBit.pictureExpression.picture_FACE2|block": "帆船",
+  "LEDBit.pictureExpression.picture_FACE3|block": "小爱心",
+  "LEDBit.pictureExpression.picture_FACE4|block": "酒杯",
+  "LEDBit.pictureExpression.picture_FACE5|block": "茶壶",
+  "LEDBit.pictureExpression.picture_FACE6|block": "房子"
 }
