@@ -4,7 +4,7 @@
   "LEDBit.LEDClear|block": "LED表情面板 清空",
   "LEDBit.LEDAllOn|block": "LED表情面板 全亮",
   "LEDBit.LEDdynamic|block": "LED表情面板 显示动态表情|%index_1",
-  "LEDBit.LEDcharacter|block": "LED表情面板 显示英文字母|%index_2",
+  "LEDBit.LEDcharacter|block": "LED表情面板 显示字母|%index_2",
   "LEDBit.enState.OFF|block": "灭",
   "LEDBit.enState.ON|block": "亮",
   "LEDBit.enExpression.FACE1|block": "微笑",
