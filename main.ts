@@ -736,14 +736,14 @@ namespace LEDBit {
     }
 
 
-	//% blockId=ledbit_led_picture block="LED pictureexpression Show|%index_3"
+	//% blockId=ledbit_led_picture block="LED picture Show|%index_3"
     //% weight=96
-    export function LEDpicture(index_3: enExpression): void {
+    export function LEDpicture(index_3: pictureExpression): void {
         if (!initMatrix) {
             matrixInit();
             initMatrix = true;
         }
-        switch(index) { 
+        switch(index_3) { 
             case pictureExpression.FACE1: { 
                 Big_heart[0] = Big_heart1[0];
                 for (let i = 1; i < 17; i += 2) {
