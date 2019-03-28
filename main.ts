@@ -750,7 +750,7 @@ namespace LEDBit {
                 pins.i2cWriteBuffer(HT16K33_ADDRESS, num_1);
                 break; 
             } 
-            case numberExpression.num_FACE2: { 
+            case numExpression.num_FACE2: { 
                 //statements; 
                 num_2[0] = num_21[0];
                 for (let i = 1; i < 17; i += 2) {
