@@ -741,7 +741,7 @@ namespace LEDBit {
         }
         switch(index_3) { 
             case numExpression.num_FACE1: { 
-                number_1[0] = num_11[0];
+                num_1[0] = num_11[0];
                 for (let i = 1; i < 17; i += 2) {
                     num_1[i] = num_11[i + 1];
                     num_1[i + 1] = num_11[i];
