@@ -44,6 +44,6 @@
   "LEDBit.characterExpression.character_FACE24|block": "X",
   "LEDBit.characterExpression.character_FACE25|block": "Y",
   "LEDBit.characterExpression.character_FACE26|block": "Z",
-  "LEDBit.numExpression.num_FACE1|block": "num_1",
-  "LEDBit.numExpression.num_FACE2|block": "num_2"
+  "LEDBit.numExpression.num_FACE1|block": "num1",
+  "LEDBit.numExpression.num_FACE2|block": "num2"
 }

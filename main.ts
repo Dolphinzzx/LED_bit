@@ -65,18 +65,18 @@ namespace LEDBit {
     
 	//数字
     export enum numExpression { 
-        //% blockId="num_FACE1" block="num_1"
+        //% blockId="num_FACE1" block="num1"
         num_FACE1 = 0,
-        //% blockId="num_FACE2" block="num_2"
+        //% blockId="num_FACE2" block="num2"
         num_FACE2,
 		
     }
 	
-	let num_1 = pins.createBuffer(17);
-    let num_2 = pins.createBuffer(17);
+	let num1 = pins.createBuffer(17);
+    let num2 = pins.createBuffer(17);
 	
-	let num_1:number[] = [0x0, 0x1, 0x0, 0x1, 0x80, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x7, 0xc0];
-    let num_2:number[] = [0x0, 0x1, 0xc0, 0x2, 0x20, 0x2, 0x0, 0x1, 0x0, 0x0, 0x80, 0x0, 0x40, 0x0, 0x20, 0x3, 0xf0];
+	let num1:number[] = [0x0, 0x1, 0x0, 0x1, 0x80, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x1, 0x0, 0x7, 0xc0];
+    let num2:number[] = [0x0, 0x1, 0xc0, 0x2, 0x20, 0x2, 0x0, 0x1, 0x0, 0x0, 0x80, 0x0, 0x40, 0x0, 0x20, 0x3, 0xf0];
 	
 	//动态表情
     export enum dynamicExpression { 
@@ -741,24 +741,24 @@ namespace LEDBit {
         }
         switch(index_3) { 
             case numExpression.num_FACE1: { 
-                num_1[0] = num_11[0];
+                num1[0] = num11[0];
                 for (let i = 1; i < 17; i += 2) {
-                    num_1[i] = num_11[i + 1];
-                    num_1[i + 1] = num_11[i];
+                    num1[i] = num11[i + 1];
+                    num1[i + 1] = num11[i];
                 }
 
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_1);
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, num1);
                 break; 
             } 
             case numExpression.num_FACE2: { 
                 //statements; 
-                num_2[0] = num_21[0];
+                num2[0] = num21[0];
                 for (let i = 1; i < 17; i += 2) {
-                    num_2[i] = num_21[i + 1];
-                    num_2[i + 1] = num_21[i];
+                    num2[i] = num21[i + 1];
+                    num2[i + 1] = num21[i];
                 }
            
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_2);
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, num2);
                 break; 
             } 
             
