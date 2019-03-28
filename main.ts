@@ -462,54 +462,14 @@ namespace LEDBit {
          } 
     }
 	
-	 /**
-     * *****************************************************************
-     * @param index_3
-     */
-	 
-	 //% blockId=ledbit_led_num block="LED numexpression Show|%index_3"
-    //% weight=97
-    export function LEDnum(index_3: numExpression): void {
-        if (!initMatrix) {
-            matrixInit();
-            initMatrix = true;
-        }
-        switch(index_3) { 
-            case numExpression.FACE1: { 
-                number_1[0] = num_11[0];
-                for (let i = 1; i < 17; i += 2) {
-                    num_1[i] = num_11[i + 1];
-                    num_1[i + 1] = num_11[i];
-                }
-
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_1);
-                break; 
-            } 
-            case numberExpression.FACE2: { 
-                //statements; 
-                num_2[0] = num_21[0];
-                for (let i = 1; i < 17; i += 2) {
-                    num_2[i] = num_21[i + 1];
-                    num_2[i + 1] = num_21[i];
-                }
-           
-                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_2);
-                break; 
-            } 
-            
-            default: { 
-               //statements; 
-               break; 
-            } 
-        } 
-    }
+	
 	
 	/**
      * *****************************************************************
      * @param index_2
      */
 	//% blockId=ledbit_led_character block="LED character Show|%index_2"
-    //% weight=96
+    //% weight=97
     export function LEDcharacter(index_2: characterExpression): void {
         if (!initMatrix) {
             matrixInit();
@@ -765,6 +725,50 @@ namespace LEDBit {
          } 
     }
 
+
+
+ /**
+     * *****************************************************************
+     * @param index_3
+     */
+	 
+	 //% blockId=ledbit_led_num block="LED numexpression Show|%index_3"
+    //% weight=96
+    export function LEDnum(index_3: numExpression): void {
+        if (!initMatrix) {
+            matrixInit();
+            initMatrix = true;
+        }
+        switch(index_3) { 
+            case numExpression.num_FACE1: { 
+                number_1[0] = num_11[0];
+                for (let i = 1; i < 17; i += 2) {
+                    num_1[i] = num_11[i + 1];
+                    num_1[i + 1] = num_11[i];
+                }
+
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_1);
+                break; 
+            } 
+            case numberExpression.num_FACE2: { 
+                //statements; 
+                num_2[0] = num_21[0];
+                for (let i = 1; i < 17; i += 2) {
+                    num_2[i] = num_21[i + 1];
+                    num_2[i + 1] = num_21[i];
+                }
+           
+                pins.i2cWriteBuffer(HT16K33_ADDRESS, num_2);
+                break; 
+            } 
+            
+            default: { 
+               //statements; 
+               break; 
+            } 
+        } 
+    }
+	
 	
     //% blockId=ledbit_led_draw block="LED expression Draw|X %x|Y %y| %on"
     //% x.min=1 x.max=15 y.min=0 y.max=7
