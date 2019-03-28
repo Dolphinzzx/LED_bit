@@ -5,7 +5,6 @@
   "LEDBit.LEDAllOn|block": "LED表情面板 全亮",
   "LEDBit.LEDdynamic|block": "LED表情面板 显示动态表情|%index_1",
   "LEDBit.LEDcharacter|block": "LED表情面板 显示字母|%index_2",
-  "LEDBit.LEDpic|block": "LED表情面板 显示静态图案|%index_3",
   "LEDBit.enState.OFF|block": "灭",
   "LEDBit.enState.ON|block": "亮",
   "LEDBit.enExpression.FACE1|block": "微笑",
@@ -43,6 +42,5 @@
   "LEDBit.characterExpression.character_FACE23|block": "W",
   "LEDBit.characterExpression.character_FACE24|block": "X",
   "LEDBit.characterExpression.character_FACE25|block": "Y",
-  "LEDBit.characterExpression.character_FACE26|block": "Z",
-  "LEDBit.picExpression.pic_FACE1|block": "大爱心"
+  "LEDBit.characterExpression.character_FACE26|block": "Z"
 }
