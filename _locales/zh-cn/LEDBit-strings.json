@@ -6,6 +6,7 @@
   "LEDBit.LEDdynamic|block": "LED表情面板 显示动态表情|%index_1",
   "LEDBit.LEDcharacter|block": "LED表情面板 显示字母|%index_2",
   "LEDBit.LEDnum|block": "LED表情面板 显示数字|%index_3",
+  "LEDBit.LEDpicture|block": "LED表情面板 显示静态图案|%index_4",
   "LEDBit.enState.OFF|block": "灭",
   "LEDBit.enState.ON|block": "亮",
   "LEDBit.enExpression.FACE1|block": "微笑",
@@ -45,5 +46,18 @@
   "LEDBit.characterExpression.character_FACE25|block": "Y",
   "LEDBit.characterExpression.character_FACE26|block": "Z",
   "LEDBit.numExpression.num_FACE1|block": "num1",
-  "LEDBit.numExpression.num_FACE2|block": "num2"
+  "LEDBit.numExpression.num_FACE2|block": "num2",
+  "LEDBit.numExpression.num_FACE3|block": "num3",
+  "LEDBit.numExpression.num_FACE4|block": "num4",
+  "LEDBit.numExpression.num_FACE5|block": "num5",
+  "LEDBit.numExpression.num_FACE6|block": "num6",
+  "LEDBit.numExpression.num_FACE7|block": "num7",
+  "LEDBit.numExpression.num_FACE8|block": "num8",
+  "LEDBit.numExpression.num_FACE9|block": "num9",
+  "LEDBit.pictureExpression.picture_FACE1|block": "大爱心",
+  "LEDBit.pictureExpression.picture_FACE2|block": "帆船",
+  "LEDBit.pictureExpression.picture_FACE3|block": "小爱心",
+  "LEDBit.pictureExpression.picture_FACE4|block": "酒杯",
+  "LEDBit.pictureExpression.picture_FACE5|block": "茶壶",
+  "LEDBit.pictureExpression.picture_FACE6|block": "房子"
 }

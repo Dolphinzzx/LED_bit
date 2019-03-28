@@ -1,11 +1,12 @@
 {
-  "LEDBit.LEDShow|block": "LED表情面板 顯示静态表情|%index",
+  "LEDBit.LEDShow|block": "LED表情面板 顯示靜態表情|%index",
   "LEDBit.LEDDraw|block": "LED表情面板 設置|X %x|Y %y| %on",
   "LEDBit.LEDClear|block": "LED表情面板 清空",
   "LEDBit.LEDAllOn|block": "LED表情面板 全亮",
   "LEDBit.LEDdynamic|block": "LED表情面板 顯示動態表情|%index_1",
   "LEDBit.LEDcharacter|block": "LED表情面板 顯示英文字母|%index_2",
   "LEDBit.LEDnum|block": "LED表情面板 顯示數字|%index_3",
+  "LEDBit.LEDpicture|block": "LED表情面板 顯示靜態圖案|%index_4",
   "LEDBit.enState.OFF|block": "滅",
   "LEDBit.enState.ON|block": "亮",
   "LEDBit.enExpression.FACE1|block": "微笑",
@@ -52,7 +53,12 @@
   "LEDBit.numExpression.num_FACE6|block": "num6",
   "LEDBit.numExpression.num_FACE7|block": "num7",
   "LEDBit.numExpression.num_FACE8|block": "num8",
-  "LEDBit.numExpression.num_FACE9|block": "num9"
-  
-  
+  "LEDBit.numExpression.num_FACE9|block": "num9",
+  "LEDBit.pictureExpression.picture_FACE1|block": "大愛心",
+  "LEDBit.pictureExpression.picture_FACE2|block": "帆船",
+  "LEDBit.pictureExpression.picture_FACE3|block": "小愛心",
+  "LEDBit.pictureExpression.picture_FACE4|block": "酒杯",
+  "LEDBit.pictureExpression.picture_FACE5|block": "茶壺",
+  "LEDBit.pictureExpression.picture_FACE6|block": "房子"
+   
 }
